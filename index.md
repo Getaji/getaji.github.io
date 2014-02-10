@@ -1,2 +1,5 @@
 #Margherita Works
-on github.com
+
+##Link
+* [Github](https://github.com/Getaji)
+* [Twitter](https://twitter.com/Getaji)
