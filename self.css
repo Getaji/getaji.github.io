@@ -1,1 +1,11 @@
+#content {
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
 footer {font-size: small; text-align: center; margin-top: 50px;}

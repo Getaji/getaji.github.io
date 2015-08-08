@@ -1,0 +1,72 @@
+body {
+    background-color: #F5F5F5;
+    font-family: "KozGoPro-Light", "è¨íÀÉSÉVÉbÉN Pro L", "ÉqÉâÉMÉmäpÉS ProN W3", "Hiragino Kaku Gothic ProN", "ü‡ÉSÉVÉbÉN", YuGothic, "ÉÅÉCÉäÉI", Meiryo, sans-serif;
+}
+#title {
+    text-align: center;
+    font-size: x-large;
+    padding: 16px;
+}
+#description {
+    text-align: center;
+    font-size: small;
+    padding: 16px;
+}
+.pagination {
+    display: none;
+}
+#page-1 {
+    display: block;
+}
+#contents {
+    width: 80%;
+    margin: auto 100px;
+}
+.image {
+    /*color: white;*/
+    /*background-color: #16A6B6;*/
+    border: 1px solid black;;
+    width: auto;
+    margin: 2px;
+    padding: 16px 16px 10px 16px;
+    float: left;
+    text-align: center;
+}
+
+.image .dotpict {
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+ */
+    image-rendering: -webkit-optimize-contrast; /* Safari (WebKit) */
+    image-rendering: -moz-crisp-edges;          /* Firefox (Gecko) */
+    image-rendering: -o-crisp-edges;            /* Opera 12.x */
+    image-rendering: pixelated;                 /* Chrome 41+, Opera 29+ (CSS4) */
+}
+
+.image .name {
+    padding-top: 8px;
+    border-top: 1px solid;
+    font-weight: bold;
+    font-size: medium;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.image .size {
+    font-size: small;
+    margin: 0;
+}
+
+form {
+    margin-bottom: 8px;
+}
+
+form #query {
+    border: none;
+    background-color: #16A6B6;
+    padding: 3px;
+}
+
+form #submit {
+    border: none;
+    margin-left: 4px;
+    background-color: #16A6B6;
+}

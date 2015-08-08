@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>裏路地ドット絵アイコン素材配布所 | Margherita Works</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery.simplePagination.js"></script>
+    <script src="js/jsrender.min.js"></script>
+    <script src="js/index.js"></script>
+    <script id="imageTemplate" type="text/x-jsrender">
+	    <div class="image item_{{:id}}">
+            <img class="dotpict" src="{{:url}}" width=64 />
+            <p class="name">{{:name}}</p>
+            <p class="size">x{{:size}}</p>
+        </div>
+    </script>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <link type="text/css" rel="stylesheet" href="css/simplePagination.css"/>
+</head>
+<body>
+<div id="contents">
+    <div id="title">裏路地ドット絵アイコン素材配布所</div>
+    <div id="description">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
+        これらの作品は <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a><br />
+        改変、商用利用、再配布を許可します。著作権情報を必ず明記してください。<br />
+        直リンクはサーバーへ負荷をかける原因になりますのでご遠慮ください。<br />
+        <br />
+        全てx64に拡大して表示しています。実サイズは個別に記載しています。
+    </div>
+    <!--form>
+        <input id="query" name="query" type="text">
+        <input id="submit" type="button" value="絞込">
+    </form-->
+    <div class="pagination" id="page-1">
+        <div id="images">
+        </div>
+    </div>
+</div>
+</body>
+</html>
