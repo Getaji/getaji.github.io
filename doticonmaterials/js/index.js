@@ -8,6 +8,8 @@ $(function() {
     };
 
     var images = [
+        new Image("目", "eye", ["生物"], 16),
+        new Image("メダル", "medal", ["装飾品"], 16),
         new Image("炎の宝石", "fire_gem", ["素材"], 16),
         new Image("緑の玉", "green_ball", ["素材"], 16),
         new Image("折り畳みナイフ", "knife", ["武器"], 16),
@@ -28,6 +30,4 @@ $(function() {
         var value = $("#query").value;
         alert(value);
     }
-});/**
- * Created by Margherita on 2015/08/08.
- */
+});
