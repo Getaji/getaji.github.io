@@ -1,27 +1,36 @@
 body {
     background-color: #F5F5F5;
-    font-family: "KozGoPro-Light", "¬’ËƒSƒVƒbƒN Pro L", "ƒqƒ‰ƒMƒmŠpƒS ProN W3", "Hiragino Kaku Gothic ProN", "ŸàƒSƒVƒbƒN", YuGothic, "ƒƒCƒŠƒI", Meiryo, sans-serif;
+    font-family: "KozGoPro-Light", "ï¿½ï¿½ï¿½ËƒSï¿½Vï¿½bï¿½N Pro L", "ï¿½qï¿½ï¿½ï¿½Mï¿½mï¿½pï¿½S ProN W3", "Hiragino Kaku Gothic ProN", "ï¿½ï¿½ï¿½Sï¿½Vï¿½bï¿½N", YuGothic, "ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½I", Meiryo, sans-serif;
 }
+
 #title {
     text-align: center;
     font-size: x-large;
     padding: 16px;
 }
+
 #description {
     text-align: center;
     font-size: small;
     padding: 16px;
 }
+
 .pagination {
     display: none;
 }
+
 #page-1 {
     display: block;
 }
+
 #contents {
     width: 80%;
     margin: auto 100px;
 }
+
+#images {
+}
+
 .image {
     /*color: white;*/
     /*background-color: #16A6B6;*/
@@ -33,12 +42,16 @@ body {
     text-align: center;
 }
 
-.image .dotpict {
+.dotpict {
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+ */
     image-rendering: -webkit-optimize-contrast; /* Safari (WebKit) */
     image-rendering: -moz-crisp-edges;          /* Firefox (Gecko) */
     image-rendering: -o-crisp-edges;            /* Opera 12.x */
     image-rendering: pixelated;                 /* Chrome 41+, Opera 29+ (CSS4) */
+}
+
+.dotpict:hover {
+    background-color: black;
 }
 
 .image .name {
@@ -55,18 +68,9 @@ body {
     margin: 0;
 }
 
-form {
-    margin-bottom: 8px;
-}
-
-form #query {
-    border: none;
-    background-color: #16A6B6;
-    padding: 3px;
-}
-
-form #submit {
-    border: none;
-    margin-left: 4px;
-    background-color: #16A6B6;
+footer {
+    font-size: small;
+    text-align: center;
+    padding-top: 64px;
+    clear: both;
 }
