@@ -1,8 +1,6 @@
 body {
   margin: 0 auto;
   padding: 0;
-  overflow: hidden;
-  position: relative;
   background-color: #FAFAFA;
 }
 
@@ -11,9 +9,7 @@ body {
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
-  width: 100%;
-  margin: 0 -500%;
-  padding: 10px 500%;
+  padding: 10px;
   border-bottom: 1px solid lightgray;
 }
 
@@ -60,3 +56,9 @@ body {
 }
 
 footer {font-size: small; text-align: center; margin-top: 50px;}
+
+a, a:visited {
+    color: #4183C4;
+    background-color: inherit;
+    text-decoration: none;
+}
