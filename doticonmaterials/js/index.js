@@ -9,9 +9,9 @@ $(function() {
   
   var dotpicts = [];
   var dotpictsBySize = {};
-  function dotpict(name, id, size, type, tooltip) {
-    if (!type) type = 'png';
+  function dotpict(name, id, size, tooltip, type) {
     if (!tooltip) tooltip = '';
+    if (!type) type = 'png';
     var d = { name, id, size, url: 'icons/'+id+'.'+type, tooltip };
     dotpicts.push(d);
     if (!(size in dotpictsBySize)) {
@@ -20,21 +20,21 @@ $(function() {
     dotpictsBySize[size].push(d);
   }
 
-  dotpict('目', 'eye', 16);
-  dotpict('メダル', 'medal', 16);
-  dotpict('炎の宝石', 'fire_gem', 16);
-  dotpict('緑の玉', 'green_ball', 16);
-  dotpict('折り畳みナイフ', 'knife', 16);
-  dotpict('氷の剣', 'ice_sword', 16);
-  dotpict('指輪', 'ring', 16);
-  dotpict('本', 'book', 24);
-  dotpict('ライトスタンド', 'light_stand', 24);
-  dotpict('剣', 'sword', 24);
-  dotpict('小瓶', 'small_bottle', 24, 'gif', 'モデルは無印良品のローズマリーのエッセンシャルオイル');
-  dotpict('斧', 'axe', 32);
-  dotpict('金槌', 'hammer', 32);
-  dotpict('ブーメラン', 'boomerang', 32);
-  dotpict('爪', 'claw', 32);
+  dotpict('目', 'eye', 16, '普通の目');
+  dotpict('メダル', 'medal', 16, 'メダル部分が安っぽい。多分プラスチック');
+  dotpict('炎の宝石', 'fire_gem', 16, '宝石……？');
+  dotpict('緑の玉', 'green_ball', 16, '某アレ(伝わらなくていい)用に用意した謎の玉');
+  dotpict('折り畳みナイフ', 'knife', 16, 'ちょっと気に入っている');
+  dotpict('氷の剣', 'ice_sword', 16, 'ただの青い剣');
+  dotpict('指輪', 'ring', 16, '形状が微妙');
+  dotpict('本', 'book', 24, '雑');
+  dotpict('ライトスタンド', 'light_stand', 24, '机の上にある');
+  dotpict('剣', 'sword', 24, '習作');
+  dotpict('小瓶', 'small_bottle', 24, 'モデルは無印良品のローズマリーのエッセンシャルオイル', 'gif');
+  dotpict('斧', 'axe', 32, '貴方が落としたのはこの素材ですか？');
+  dotpict('金槌', 'hammer', 32, '武器っぽい');
+  dotpict('ブーメラン', 'boomerang', 32, '物に当たっても帰ってくるゲームのブーメラン');
+  dotpict('爪', 'claw', 32, 'ドラクエに出てきそうなアレ');
 
   var dotpictsC = $('#dotpictsContainer');
   var dotpictsTemplate = $('#dotpictsTemplate');
