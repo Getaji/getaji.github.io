@@ -121,9 +121,14 @@ body {
   background-color: black;
 }
 
+#link-index {
+  font-size: small;
+  text-align: center;
+  margin-top: 64px;
+}
+
 footer {
   font-size: small;
   text-align: center;
-  padding-top: 64px;
-  clear: both;
+  margin-top: 10px;
 }
