@@ -30,6 +30,7 @@ $(function() {
   dotpict('本', 'book', 24);
   dotpict('ライトスタンド', 'light_stand', 24);
   dotpict('剣', 'sword', 24);
+  dotpict('小瓶', 'small_bottle', 24, 'gif', 'モデルは無印良品のローズマリーのエッセンシャルオイル');
   dotpict('斧', 'axe', 32);
   dotpict('金槌', 'hammer', 32);
   dotpict('ブーメラン', 'boomerang', 32);
