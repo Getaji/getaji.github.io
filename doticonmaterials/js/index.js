@@ -9,8 +9,10 @@ $(function() {
   
   var dotpicts = [];
   var dotpictsBySize = {};
-  function dotpict(name, id, size) {
-    var d = { name, id, size, url: 'icons/'+id+'.png' };
+  function dotpict(name, id, size, type, tooltip) {
+    if (!type) type = 'png';
+    if (!tooltip) tooltip = '';
+    var d = { name, id, size, url: 'icons/'+id+'.'+type, tooltip };
     dotpicts.push(d);
     if (!(size in dotpictsBySize)) {
       dotpictsBySize[size] = [];
