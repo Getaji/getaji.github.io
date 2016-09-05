@@ -43,6 +43,12 @@ body {
   text-align: center;
 }
 
+#histories-inner {
+  height: 130px;
+  overflow: scroll;
+  overflow-x: auto;
+}
+
 #histories-title {
   font-size: medium;
   font-weight: bold;
