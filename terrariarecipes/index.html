@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Terraria Recipes(Beta) | Margherita Works</title>
+  <link rel="stylesheet" type="text/css" href="style-sections.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.80/jsrender.min.js"></script>
+  <script type="text/javascript" src="items.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script id="itemsTmpl" type="text/x-jsrender">
+    <div class="item">
+      <div class="item-name">
+        {{if status && status.category}}
+          <div class="item-icons">
+            {{for status.category}}
+              <img src="./icon/{{:#view.data}}.png" />
+            {{/for}}
+          </div>
+        {{/if}}
+        {{:name}}
+        <div class="item-link">
+          <a href="http://terraria.gamepedia.com/{{:urlName}}" target="_blank" title="Official Wiki"><img src="./icon/enwiki.ico"></a>
+          <a href="http://terraria.arcenserv.info/wiki/{{:urlName}}" target="_blank" title="Japan Wiki"><img src="./icon/jpwiki.ico"></a>
+        </div>
+      </div>
+      {{if status && status.category}}
+        <div class="item-categories">
+          {{:status.categoryHTML}}
+        </div>
+      {{/if}}
+      <div class="item-recipes">
+      {{for recipes}}
+        <div class="item-recipe-wrapper">
+          <div class="item-recipe">
+          {{if other}}
+            {{:other}}
+          {{else}}
+            <div class="materials">
+            {{props materials}}
+              <div class="material">
+                <u>{{>key}}</u> x{{>prop}}
+              </div>
+            {{/props}}
+            </div>
+            {{if furnitures}}
+              Furnitures: {{:furnituresHTML.join(', ')}}
+            {{/if}}
+            {{if pcs}}
+              <div class="item-pcs">
+              {{:pcs}} pcs
+              </div>
+            {{/if}}
+          {{/if}}
+          </div>
+        </div>
+      {{/for}}
+      </div>
+    </div>
+  </script>
+</head>
+<body>
+  <div id="header">Terraria Recipes (Beta)</div>
+  <div id="contents">
+    <div id="form">
+      <select id="searchType">
+        <option value="itemName">Item Name</option>
+        <option value="material">Recipe</option>
+        <option value="category">Category</option>
+        <option value="furniture">Furniture</option>
+      </select>
+      <input id="itemName" type="text" placeholder="item name" />
+      <label><input id="isPerfect" type="checkbox">Perfect Matching</label>
+    </div>
+    <div id="recipesCount">
+      Matched <span>0</span> items
+    </div>
+    <div id="recipesWrapper">
+    <div id="recipes">
+    </div>
+    </div>
+  </div>
+  <div id="info">
+    Corresponding to Terraria 1.3.3.2 Tools and Weapons
+  </div>
+  <footer>Copyright 2014-2016 Margherita Works / Getaji<br>
+  Item icons was sited from Re-Logic / Terraria</footer>
+</body>
+</html>

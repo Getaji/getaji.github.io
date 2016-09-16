@@ -1,0 +1,111 @@
+#contents {
+  padding: 0 50px;
+}
+#recipes {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#form {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #444;
+  width: 450px;
+  vertical-align: middle;
+}
+
+#recipesCount {
+  text-align: center;
+  font-size: small;
+  padding-bottom: 10px;
+}
+
+label {
+  font-size: small;
+}
+
+#recipes {
+}
+
+.item {
+  width: 350px;
+  border: 1px solid #DDD;
+  margin: 3px 0;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  background-color: #FAFAFA;
+}
+
+.item-icons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.item-icons img {
+  -webkit-filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
+  -moz-filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
+  -o-filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
+  -ms-filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
+}
+
+.item-name {
+  font-weight: bold;
+  background-color: white;
+  border-bottom: 1px solid #DDD;
+  position: relative;
+}
+
+.item-link {
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  bottom: 0px;
+}
+
+.item-categories {
+  font-size: x-small;
+  padding-bottom: 2px;
+  border: 1px solid #666;
+}
+
+.item-recipe {
+  font-size: small;
+  margin: 1px 0;
+  /*display: inline-block;
+  text-align: left;*/
+  padding: 1px 8px 3px 8px;
+}
+
+.item-recipe-wrapper {
+  border-bottom: 1px solid #AAA;
+}
+
+.item-recipe-wrapper:last-child {
+  border-bottom: none;
+}
+
+#info {
+  font-size: small;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* dark theme */
+body, #header {
+  background-color: #222;
+  color: #DDD;
+}
+.item {
+  background-color: #222;
+}
+.item u {
+  cursor: pointer;
+}
+.item-name {
+  background-color: #444;
+}
+#header {
+}
