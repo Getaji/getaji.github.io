@@ -40,6 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
           if (matcher(recipe._other)) {
             result.push(item);
           }
+        } else if (recipe._buy) {
+          if (matcher('buy from the ' + recipe.buy)) {
+            result.push(item);
+          }
         }
       }
     }

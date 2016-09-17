@@ -43,13 +43,13 @@ label {
   vertical-align: middle;
 }
 
-.item-icons img {
+.item-icons img {/*
   -webkit-filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
   -moz-filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
   -o-filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
   -ms-filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
   filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
-}
+*/}
 
 .item-name {
   font-weight: bold;

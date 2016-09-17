@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="style-sections.css">
   <link rel="stylesheet" type="text/css" href="index.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.80/jsrender.min.js"></script>
-  <script type="text/javascript" src="items.js"></script>
+  <script type="text/javascript" src="items_compiled.js"></script>
   <script type="text/javascript" src="index.js"></script>
   <script id="itemsTmpl" type="text/x-jsrender">
     <div class="item">
@@ -35,11 +35,17 @@
           <div class="item-recipe">
           {{if other}}
             {{:other}}
+          {{else buy}}
+            <u>Buy</u>
+            {{props price}}
+              {{>prop}}<img src="./icon/{{>key}}_coin.png" title="{{>key}}">
+            {{/props}}
+            from the {{:buy}}
           {{else}}
             <div class="materials">
             {{props materials}}
               <div class="material">
-                <u>{{>key}}</u> x{{>prop}}
+                {{:key}} x{{>prop}}
               </div>
             {{/props}}
             </div>
@@ -84,6 +90,6 @@
     Corresponding to Terraria 1.3.3.2 Tools and Weapons
   </div>
   <footer>Copyright 2014-2016 Margherita Works / Getaji<br>
-  Item icons was sited from Re-Logic / Terraria</footer>
+  Item data was sited from Re-Logic / Terraria</footer>
 </body>
 </html>
