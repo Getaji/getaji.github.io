@@ -1,8 +1,6 @@
 body {
   margin: 0 auto;
   padding: 0;
-  overflow: hidden;
-  position: relative;
   background-color: #FAFAFA;
 }
 
@@ -21,9 +19,7 @@ button:focus {
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
-  width: 100%;
-  margin: 0 -500%;
-  padding: 10px 500%;
+  padding: 10px 0;
   border-bottom: 1px solid lightgray;
 }
 
