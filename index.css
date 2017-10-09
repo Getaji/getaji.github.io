@@ -6,11 +6,12 @@ body {
 }
 
 #header {
-  background-color: white;
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
+  margin: 0 auto;
   padding: 10px;
+  width: 300px;
   border-bottom: 1px solid lightgray;
 }
 
@@ -19,17 +20,15 @@ body {
 }
 
 .section {
-  border: 1px solid lightgray;
-  margin: 16px auto;
-  width: 600px;
+  margin: 8px auto;
+  width: 500px;
   border-radius: 3px;
 }
 
 .section-title {
   font-size: x-large;
   font-weight: bold;
-  padding: 8px;
-  padding-left: 12px;
+  padding-bottom: 2px;
   border-bottom: 1px solid lightgray;
 }
 
@@ -38,13 +37,12 @@ body {
 }
 
 .section-contents {
-  padding: 10px 0px 10px 32px;
-  background-color: white;
+  padding: 6px 0 0 32px;
   font-size: small;
 }
 
 .section-contents-item .title {
-  margin: 8px 0;
+  margin: 4px 0;
   font-weight: bold;
   font-size: medium;
 }
