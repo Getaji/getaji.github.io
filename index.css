@@ -1,66 +1,69 @@
 body {
-  margin: 0 auto;
-  padding: 0;
-  background-color: #FAFAFA;
-  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #FAFAFA;
+    font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 #header {
-  font-size: xx-large;
-  font-weight: bold;
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px;
-  width: 300px;
-  border-bottom: 1px solid lightgray;
+    text-align: center;
+    font-size: x-large;
+    width: 300px;
+    margin: 0 auto 30px auto;
+    padding: 10px 0;
+}
+
+#header:hover {
+    animation: vibration .1s  infinite;
+}
+
+/* by https://q-az.net/buruburu-hurueru-css/ */
+@keyframes vibration {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(2px, 2px) rotateZ(1deg)}
+    50% {transform: translate(0px, 2px) rotateZ(0deg)}
+    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
+#face {
+    text-align: center;
 }
 
 #contents {
-  margin-top: 20px;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 .section {
-  margin: 8px auto;
-  width: 500px;
-  border-radius: 3px;
+    margin: 40px 0;
 }
 
 .section-title {
-  font-size: x-large;
-  font-weight: bold;
-  padding-bottom: 2px;
-  border-bottom: 1px solid lightgray;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    margin: 0 auto;
 }
 
-.section-title>* {
-  vertical-align: middle;
+.section-body {
+    font-family: HelveticaNeue-Light,'Helvetica Neue Light',sans-serif;
+    font-size: small;
+    margin: 0 30px;
+    padding-top: 4px;
+    text-align: center;
 }
 
-.section-contents {
-  padding: 6px 0 0 32px;
-  font-size: small;
+.section-body ul {
+    padding-left: 24px;
+    margin: 4px 0;
+    list-style-type: square;
+    text-align: left;
 }
 
-.section-contents-item .title {
-  margin: 4px 0;
-  font-weight: bold;
-  font-size: medium;
-}
-
-.section-contents-item .desc {
-  font-size: small;
-  padding-left: 8px;
-  margin-bottom: 16px;
-}
-
-footer {font-size: small; text-align: center; margin-top: 50px;}
-
-a, a:visited {
-  color: #4183C4;
-  background-color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
- text-decoration: underline;
+footer {
+    font-size: small;
+    margin-top: 50px;
+    text-align: center;
 }

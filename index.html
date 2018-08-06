@@ -6,121 +6,46 @@
   <title>Margherita Works</title>
 </head>
 <body>
-  <div id="header">Margherita Works</div>
   <div id="contents">
-    <div id="section-about" class="section">
+    <div id="header">getaji.github.io</div>
+    <div id="face">( ´ω｀ )</div>
+    <div class="section">
       <div class="section-title">
-        <img class="section-title-icon" src="img/question_black_x16.gif">
-        <span>Profile</span>
+        だれ
       </div>
-      <div class="section-contents">
-        ハンドルネーム: Getaji<br>
-        好きなもの: FF14, フラワーナイトガール、紅茶, 音楽(特に米津玄師), 小説<br>
-        プログラミング言語: Java, JavaScript, Python<br>
-        職業: <b>** 求職中 **</b>
+      <div class="section-body">
+        <ul>
+          <li>Getaji</li>
+          <li>成人済み 男性</li>
+          <li>米津玄師さんが好き</li>
+          <li>主にJavaScriptで趣味のプログラミング</li>
+          <li>広く浅くすぐ飽きる</li>
+          <li>求職中（社会人適正なし）</li>
+          <li>メンタルが非常に弱い</li>
+          <li>性格が悪い</li>
+          <li><a href="https://twitter.com/Getaji" target="_blank">Twitter</a></li>
+        </ul>
       </div>
     </div>
-    <div id="section-apps" class="section">
+    <div class="section">
       <div class="section-title">
-        <img class="section-title-icon" src="img/application_black_x16.gif">
-        <span>Applications</span>
+        なに
       </div>
-      <div class="section-contents">
-        <div class="section-contents-item">
-          <div class="title">
-            <a href="nicknamer.html">異名メーカー</a>
-          </div>
-          <div class="desc">
-            異名、二つ名をランダム生成します。<br />
-            通じる人向けの説明：Elonaの異名みたいな感じ
-          </div>
-        </div>
-        <div class="section-contents-item">
-          <div class="title">
-            <a href="https://gist.github.com/Getaji/ed237b9a06813291f3d6">自作ブックマークレット</a>
-          </div>
-          <div class="desc">
-            自作のブックマークレットのまとめです。<br />
-          </div>
-        </div>
+      <div class="section-body">
+        ここにコンテンツはありません。
       </div>
     </div>
-    <div id="section-dotpicts" class="section">
-      <div class="section-title">
-        <img class="section-title-icon" src="img/smile_black_x16.gif">
-        <span>Pixelarts</span>
-      </div>
-      <div class="section-contents">
-        <div class="section-contents-item">
-          <div class="title">
-            <a href="http://getaji.tumblr.com">ドット絵置き場 (tumblr)</a>
-          </div>
-          <div class="desc">
-            メインのドット絵公開所です。無断転用は禁止しています。<br />
-            Twitterアイコン向けに作った正方形のアイコン形式が多いです。
-          </div>
-        </div>
-        <div class="section-contents-item">
-          <div class="title">
-            <a href="doticonmaterials/index.html">ドット絵アイコン素材</a>
-          </div>
-          <div class="desc">
-            主に小物のドット絵アイコン素材です。
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="section-programs" class="section">
-      <div class="section-title">
-        <img class="section-title-icon" src="img/console_black_x16.gif">
-        <span>Programs</span>
-      </div>
-      <div class="section-contents">
-        <div class="section-contents-item">
-          <div class="title">
-            <a href="https://gist.github.com/Getaji/96412eee22fe960ba2dc">
-              narou4py (for Python3.4)
-            </a>
-          </div>
-          <div class="desc">
-            Python3.4用。小説投稿・閲覧サイト『小説家になろう』のWeb APIのラッパーライブラリ。<br />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="section-websites" class="section">
-      <div class="section-title">
-        <img class="section-title-icon" src="img/export_black_x16.gif">
-        <span>Links</span>
-      </div>
-      <div class="section-contents">
-        <div class="section-contents-item">
-          <div class="title">
-            <a href="http://mw.hatenablog.jp">裏路地牧場 (はてなブログ)</a>
-          </div>
-          <div class="desc">
-            メインブログです。技術系からゲームの話題までごった煮。
-          </div>
-        </div>
-        <div class="section-contents-item">
-          <div class="title">
-            <a href="https://twitter.com/Getaji">Getaji (Twitter)</a>
-          </div>
-          <div class="desc">
-            Twitterアカウントです。ろくなことを呟きません。
-          </div>
-        </div>
-        <div class="section-contents-item">
-          <div class="title">
-            <a href="https://github.com/Getaji">Getaji (Github)</a>
-          </div>
-          <div class="desc">
-            Githubアカウントです。ろくなものを公開していません。
-          </div>
-        </div>
-      </div>
-    </div>
+    <footer>© 2018 Getaji</footer>
   </div>
-  <footer>Copyright 2014-2017 Margherita Works / Getaji</footer>
+  <script type="text/javascript">
+    const face1 = '(´ω｀　)';
+    const face2 = '(　´ω｀)';
+    let faceState = true;
+    const faceE = document.getElementById('face');
+    setInterval(function() {
+      faceE.innerText = faceState ? face1 : face2;
+      faceState = !faceState;
+    }, 2000);
+  </script>
 </body>
 </html>
