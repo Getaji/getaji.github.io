@@ -1,0 +1,108 @@
+#timerGroups {
+    min-width: 500px;
+    width: 500px;
+}
+
+.timerGroupName {
+    padding: 4px 4px;
+    font-weight: bold;
+}
+
+.timerItems {
+    display: flex;
+}
+
+.timers:empty:after {
+    content: 'タイマーはありません';
+    text-align: center;
+    display: block;
+    font-size: small;
+    color: gray;
+    background-color: #EEE;
+}
+
+.timerName,
+.timerLength {
+    padding: 4px 8px;
+}
+
+.timerLength {
+    width: 80px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.timerName {
+    flex: 1;
+}
+
+.timerGroupForm {
+    display: flex;
+    margin-top: 8px;
+    padding: 2px;
+}
+
+.timerGroupForm .label {
+    flex: 1;
+}
+
+.timerGroupForm label {
+    font-size: small;
+}
+
+.timerGroupForm input[type="checkbox"] {
+    vertical-align: bottom;
+}
+
+.timerGroupForm input[type="number"] {
+    width: 3em;
+    text-align: right;
+}
+
+.timerGroupForm .add {
+    margin-left: 2px;
+}
+
+.vcProgressBar {
+    width: 100%;
+    height: 4px;
+    border: none;
+}
+
+.timerItems button {
+    height: 100%;
+}
+
+.vcProgressBar {
+    background-color: #DDD;
+}
+
+.timer-finished .vcProgressBarFg {
+    background-color: #68d3ff;
+}
+
+#globalSettings {
+    margin-top: 10px;
+}
+
+#globalSettings label {
+    display: block;
+    font-size: small;
+}
+
+button {
+    border: none;
+    background-color: #EEE;
+    padding: 1px 9px;
+    border: 1px solid #EEE;
+    color: #444;
+}
+
+button:hover:not([disabled]) {
+    border-color: #AAA;
+    color: black;
+}
+
+button[disabled] {
+    color: #888;
+}

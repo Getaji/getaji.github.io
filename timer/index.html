@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="vuecomponents.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <title>Multi Timer (beta)</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="timerGroups">
+        <timer-group
+          v-for="(group, i) in timerGroups"
+          :key="i"
+          :group="group"
+        />
+      </div>
+      <div id="globalSettings">
+        <label>
+          <input type="checkbox" v-model="isNotifyUponCompletion" />
+          完了時に通知を表示する
+        </label>
+        <label>
+          <input type="checkbox" v-model="isPlaySoundUponCompletion" />
+          完了時にサウンドを再生する
+        </label>
+      </div>
+      <datalist id="timerNameList">
+        <option v-for="name in timerNameList" :value="name"></option>
+      </datalist>
+    </div>
+    <audio id="soundeffect" preload="auto">
+      <source src="sounds/tin1.mp3" type="audio/mp3">
+    </audio>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="vuecomponents.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
