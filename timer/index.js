@@ -350,7 +350,8 @@ const app = new Vue({
     ],
     timerNameList,
     isNotifyUponCompletion: true,
-    isPlaySoundUponCompletion: true
+    isPlaySoundUponCompletion: true,
+    version: '0.1.0'
   }
 });
 
