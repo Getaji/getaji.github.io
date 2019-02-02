@@ -285,7 +285,7 @@ class Timer {
       soundeffect.play();
     }
     if (app.isNotifyUponCompletion) {
-      const notification = new Notification('タイマー「' + name + '」が完了しました');
+      const notification = new Notification('タイマー「' + this.name + '」が完了しました');
     }
     notification.onclick = () => notification.close();
   }
