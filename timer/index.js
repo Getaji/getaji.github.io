@@ -286,8 +286,8 @@ class Timer {
     }
     if (app.isNotifyUponCompletion) {
       const notification = new Notification('タイマー「' + this.name + '」が完了しました');
+      notification.onclick = () => notification.close();
     }
-    notification.onclick = () => notification.close();
   }
   // #func stop()
   stop() {
