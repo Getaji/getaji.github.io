@@ -26,27 +26,32 @@ a {
    ----------------------------------------------------------------- */
 #header {
   text-align: center;
-  font-size: x-large;
+  font-size: xx-large;
+  height: auto !important;
 }
 
 /* Section
    ----------------------------------------------------------------- */
 .c-section {
-  margin: 0 auto 40px auto;
+  margin: 0 auto 20px auto;
 }
 
 .c-section__title {
-  font-size: large;
+  font-size: x-large;
   font-weight: bold;
   text-align: center;
   margin: 8px 0;
+}
+
+.c-section__body {
+  font-size: large;
 }
 
 /* Footer
    ----------------------------------------------------------------- */
 .el-footer {
   text-align: center;
-  font-size: small;
+  font-size: medium;
 }
 
 /* ==========================================================================
@@ -140,7 +145,7 @@ ul.c-flatlist li:hover {
 .m-flexCenter {
   display: flex;
   justify-content: center;
-  align-item: center;
+  align-items: center;
 }
 
 .m-flexHorizontal {

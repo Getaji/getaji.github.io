@@ -2,14 +2,17 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="index-mobile.css" media="only screen and (min-width: 0px) and (max-width: 320px)">
+  <link rel="stylesheet" type="text/css" href="index-tablet.css" media="only screen and (min-width: 321px) and (max-width: 910px)">
+  <link rel="stylesheet" type="text/css" href="index.css" media="only screen and (min-width: 911px)">
   <title>Margherita Works</title>
 </head>
 <body>
   <div id="app">
     <el-container>
-      <el-header>Margherita Works</el-header>
+      <el-header id="header">Margherita Works</el-header>
       <el-main>
         <div class="c-section p-profile">
           <div class="c-section__body">
@@ -30,7 +33,7 @@
               <a href="pixelartenlarger/index.html">
                 <myc-box icon-size="medium">
                   <template v-slot:icon>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M6.426 10.668l-3.547-3.547-2.879 2.879v-10h10l-2.879 2.879 3.547 3.547-4.242 4.242zm11.148 2.664l3.547 3.547 2.879-2.879v10h-10l2.879-2.879-3.547-3.547 4.242-4.242zm-6.906 4.242l-3.547 3.547 2.879 2.879h-10v-10l2.879 2.879 3.547-3.547 4.242 4.242zm2.664-11.148l3.547-3.547-2.879-2.879h10v10l-2.879-2.879-3.547 3.547-4.242-4.242z"/></svg>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNi40MjYgMTAuNjY4bC0zLjU0Ny0zLjU0Ny0yLjg3OSAyLjg3OXYtMTBoMTBsLTIuODc5IDIuODc5IDMuNTQ3IDMuNTQ3LTQuMjQyIDQuMjQyem0xMS4xNDggMi42NjRsMy41NDcgMy41NDcgMi44NzktMi44Nzl2MTBoLTEwbDIuODc5LTIuODc5LTMuNTQ3LTMuNTQ3IDQuMjQyLTQuMjQyem0tNi45MDYgNC4yNDJsLTMuNTQ3IDMuNTQ3IDIuODc5IDIuODc5aC0xMHYtMTBsMi44NzkgMi44NzkgMy41NDctMy41NDcgNC4yNDIgNC4yNDJ6bTIuNjY0LTExLjE0OGwzLjU0Ny0zLjU0Ny0yLjg3OS0yLjg3OWgxMHYxMGwtMi44NzktMi44NzktMy41NDcgMy41NDctNC4yNDItNC4yNDJ6Ii8+PC9zdmc+">
                   </template>
                   <template v-slot:title>ドット絵拡大</template>
                 </myc-box>
