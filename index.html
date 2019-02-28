@@ -2,50 +2,103 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link rel="stylesheet" type="text/css" href="index.css">
   <title>Margherita Works</title>
 </head>
 <body>
-  <div id="contents">
-    <div id="header">getaji.github.io</div>
-    <div id="face">( ´ω｀ )</div>
-    <div class="section">
-      <div class="section-title">
-        だれ
-      </div>
-      <div class="section-body">
-        <ul>
-          <li>Getaji</li>
-          <li>成人済み 男性</li>
-          <li>米津玄師さんが好き</li>
-          <li>主にJavaScriptで趣味のプログラミング</li>
-          <li>広く浅くすぐ飽きる</li>
-          <li>求職中（社会人適正なし）</li>
-          <li>メンタルが非常に弱い</li>
-          <li>性格が悪い</li>
-          <li><a href="https://twitter.com/Getaji" target="_blank">Twitter</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="section">
-      <div class="section-title">
-        なに
-      </div>
-      <div class="section-body">
-        ここにコンテンツはありません。
-      </div>
-    </div>
-    <footer>© 2018 Getaji</footer>
+  <div id="app">
+    <el-container>
+      <el-header>Margherita Works</el-header>
+      <el-main>
+        <div class="c-section p-profile">
+          <div class="c-section__body">
+            <div class="p-profileIcon">
+              <img src="profileicon.jpg">
+            </div>
+            <p>―◆ Getaji ◆―</p>
+            <p>成人済み</p>
+            <p>ゲームと音楽が好き</p>
+            <p>最近は趣味でフロントエンドをやっている</p>
+            <p>生き方を探している</p>
+          </div>
+        </div>
+        <div class="c-section">
+          <div class="c-section__title">Contents</div>
+          <div class="c-section__body">
+            <div class="c-boxes m-flexCenter">
+              <a href="pixelartenlarger/index.html">
+                <myc-box icon-size="medium">
+                  <template v-slot:icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M6.426 10.668l-3.547-3.547-2.879 2.879v-10h10l-2.879 2.879 3.547 3.547-4.242 4.242zm11.148 2.664l3.547 3.547 2.879-2.879v10h-10l2.879-2.879-3.547-3.547 4.242-4.242zm-6.906 4.242l-3.547 3.547 2.879 2.879h-10v-10l2.879 2.879 3.547-3.547 4.242 4.242zm2.664-11.148l3.547-3.547-2.879-2.879h10v10l-2.879-2.879-3.547 3.547-4.242-4.242z"/></svg>
+                  </template>
+                  <template v-slot:title>ドット絵拡大</template>
+                </myc-box>
+              </a>
+              <a href="nicknamer/nicknamer.html">
+                <myc-box icon-size="medium">
+                  <template v-slot:icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"/></svg>
+                  </template>
+                  <template v-slot:title>異名生成</template>
+                </myc-box>
+              </a>
+              <a href="timer/timer.html">
+                <myc-box icon-size="medium">
+                  <template v-slot:icon>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xOS4wMDQgMWMtLjk0NyAwLTEuODk1LjI2OC0yLjcxOS44MDMgMy4xNyAxLjIxOCA1LjY5NCAzLjczOSA2LjkxNCA2LjkwOS41MzQtLjgyMy44MDEtMS43Ny44MDEtMi43MTcgMC0yLjc2MS0yLjIzNi00Ljk5NS00Ljk5Ni00Ljk5NW0tNy4wMDQgMjBjLTQuNDExIDAtOC4wMDEtMy41OS04LjAwMS04IDAtNC40MTMgMy41OS04LjAwMSA4LjAwMS04LjAwMSA0LjQxMiAwIDguMDAyIDMuNTg4IDguMDAyIDguMDAxIDAgNC40MS0zLjU5IDgtOC4wMDIgOG0xMC4wMDItOGMwLTUuNTIyLTQuNDc1LTEwLjAwMS0xMC4wMDItMTAuMDAxLTUuNTIzIDAtMTAuMDAxIDQuNDc5LTEwLjAwMSAxMC4wMDEgMCA0LjMxNiAzLjA4NyAxMCAxMC4wMDEgMTAgNi45MyAwIDEwLjAwMi01LjY5MyAxMC4wMDItMTBtLTIxLjE5OS00LjI4NWMtLjUzNS0uODI0LS44MDItMS43NzItLjgwMi0yLjcxOCAwLTIuNzU3IDIuMjMzLTQuOTk1IDQuOTkxLTQuOTk1Ljk0OCAwIDEuODk2LjI2OCAyLjcyMS44MDMtMy4xNzIgMS4yMTctNS42OTIgMy43MzktNi45MSA2LjkxbTEyLjE5NiA0LjI4NXYtNWgtMS45OTl2Ni45OThoNS45OTl2LTEuOTk4aC00eiIvPjwvc3ZnPg==">
+                  </template>
+                  <template v-slot:title>タイマー</template>
+                </myc-box>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="c-section">
+          <div class="c-section__title">Links</div>
+          <div class="c-section__body">
+            <div class="c-boxes m-flexCenter">
+              <a href="https://twitter.com/Getaji">
+                <myc-box icon-size="medium">
+                  <template v-slot:icon>
+                    <img :src="ICON_TWITTER">
+                  </template>
+                  <template v-slot:title>Twitter</template>
+                </myc-box>
+              </a>
+              <a href="https://mstdn.jp/@Getaji">
+                <myc-box icon-size="medium">
+                  <template v-slot:icon>
+                    <img :src="ICON_MASTODON">
+                  </template>
+                  <template v-slot:title>Mastodon</template>
+                </myc-box>
+              </a>
+              <a href="https://github.com/Getaji">
+                <myc-box icon-size="medium">
+                  <template v-slot:icon>
+                    <img :src="ICON_GITHUB">
+                  </template>
+                  <template v-slot:title>GitHub</template>
+                </myc-box>
+              </a>
+              <a href="https://github.com/Getaji">
+                <myc-box icon-size="medium">
+                  <template v-slot:icon>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTUuNSAxNC42MjVjMCAuNDg0LS4zODcuODc1LS44NjQuODc1aC01LjI3M2MtLjQ3NyAwLS44NjMtLjM5Mi0uODYzLS44NzVzLjM4Ny0uODc1Ljg2My0uODc1aDUuMjcyYy40NzggMCAuODY1LjM5MS44NjUuODc1em0tNi4xOTEtNC4zNzVoMi40NjZjLjQ0OCAwIC44MDktLjM5Mi44MDktLjg3NXMtLjM2MS0uODc1LS44MS0uODc1aC0yLjQ2NWMtLjQ0NyAwLS44MDkuMzkyLS44MDkuODc1cy4zNjIuODc1LjgwOS44NzV6bTE0LjY5MSAxLjc1YzAgNi42MjctNS4zNzMgMTItMTIgMTJzLTEyLTUuMzczLTEyLTEyIDUuMzczLTEyIDEyLTEyIDEyIDUuMzczIDEyIDEyem0tNS0xLjAzOWMwLS4zODMtLjMxMS0uNjkyLS42OTEtLjY5MmgtMS4xMzhjLS41ODMgMC0uNjktLjQ0Ni0uNjktLjk5Ni0uMDAxLTIuMzYtMS45MS00LjI3My00LjI2NS00LjI3M2gtMi45NTJjLTIuMzU1IDAtNC4yNjQgMS45MTMtNC4yNjQgNC4yNzJ2NS40NTVjMCAyLjM2IDEuOTA5IDQuMjczIDQuMjY0IDQuMjczaDUuNDc0YzIuMzUzIDAgNC4yNjItMS45MTMgNC4yNjItNC4yNzJ2LTMuNzY3eiIvPjwvc3ZnPg==">
+                  </template>
+                  <template v-slot:title>Blog</template>
+                </myc-box>
+              </a>
+            </div>
+          </div>
+        </div>
+      </el-main>
+      <el-footer>(c) 2019 @Getaji / Hosting on GitHub Pages</el-footer>
+    </el-container>
   </div>
-  <script type="text/javascript">
-    const face1 = '(´ω｀　)';
-    const face2 = '(　´ω｀)';
-    let faceState = true;
-    const faceE = document.getElementById('face');
-    setInterval(function() {
-      faceE.innerText = faceState ? face1 : face2;
-      faceState = !faceState;
-    }, 2000);
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
