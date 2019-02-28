@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="./nicknamer.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <title>異名メーカー - Margherita Works</title>
+</head>
+<body>
+  <div id="app">
+    <el-container id="l-appContainer">
+      <el-header id="header">異名メーカー</el-header>
+      <el-main id="l-appMain">
+        <el-scrollbar class="el-scrollbar__generatedNames">
+          <div class="l-generatedNames">
+            <ul>
+              <li v-for="name in nicknames">{{ name }}</li>
+            </ul>
+          </div>
+        </el-scrollbar>
+        <div class="p-controller">
+          <el-input-number
+            class="p-inputNamesCount"
+            type="number"
+            v-model="namesCount"
+          ></el-input-number>
+          <el-button
+            class="p-btnGenerateNames"
+            :disabled="!validateClickGenerate"
+            @click="onClickGenerate"
+          >個 再生成</el-button>
+        </div>
+      </el-main>
+      <el-footer id="footer">Copyright 2014-2016 Margherita Works / Getaji</el-footer>
+    </el-container>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script type="text/javascript" src="nickname_parts_compiled.js"></script>
+  <script type="text/javascript" src="nicknamer.js"></script>
+</body>
+</html>

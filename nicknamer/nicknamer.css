@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Foundation
+   ========================================================================== */
+
+/* Base
+   ----------------------------------------------------------------- */
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #FAFAFA;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+/* Header
+   ----------------------------------------------------------------- */
+#header {
+  font-size: x-large;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* App
+   ----------------------------------------------------------------- */
+#app {
+  width: 400px;
+  margin: 0 auto;
+}
+
+#l-appContainer {
+  margin: 0 auto;
+  height: 100vh;
+}
+
+#l-appMain {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer
+   ----------------------------------------------------------------- */
+#footer {
+  font-size: small;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Generated Nicknames
+   ----------------------------------------------------------------- */
+.l-generatedNames {
+  margin: 0 auto;
+  width: 350px;
+}
+
+.l-generatedNames ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.l-generatedNames li {
+  margin: 2px 0;
+}
+
+.el-scrollbar__generatedNames {
+  height: 75vh;
+}
+
+.el-scrollbar__generatedNames .el-scrollbar__wrap {
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Object
+   ========================================================================== */
+
+/* Project
+   ----------------------------------------------------------------- */
+/**
+ * Controllers
+ */
+.p-controller {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 8px 8px 4px 8px;
+  border-top: 1px solid lightgray;
+}
+
+.p-inputNamesCount {
+}
+
+.p-inputNamesCount input {
+  text-align: right;
+}
