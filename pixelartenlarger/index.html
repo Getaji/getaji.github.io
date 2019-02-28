@@ -34,17 +34,6 @@
     </div>
     <div id="loadState">
     </div>
-    <div id="enlargedImage">
-      <canvas
-        :width="canvasWidth"
-        :height="canvasHeight"
-        :style="canvasStyle"
-        ref="canvas"
-        @click="onClickCanvas"
-      >
-        お使いのブラウザはCanvas APIをサポートしていません。
-      </canvas>
-    </div>
     <div id="canvasToolbox">
       <div id="imageSize">
         元サイズ:
@@ -95,6 +84,17 @@
           </div>
         </div>
       </div>
+    </div>
+    <div id="enlargedImage">
+      <canvas
+        :width="canvasWidth"
+        :height="canvasHeight"
+        :style="canvasStyle"
+        ref="canvas"
+        @click="onClickCanvas"
+      >
+        お使いのブラウザはCanvas APIをサポートしていません。
+      </canvas>
     </div>
   </div>
   </div>
