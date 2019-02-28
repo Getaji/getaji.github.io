@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>ドローポーカー | Margherita Works</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.0/seedrandom.min.js">
+</script>
+  <script src="lib.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <div id="header">ドローポーカー</div>
+  <div id="contents">
+    <div id="game">
+      <div id="cards">
+      </div>
+      <div id="form">
+        <button id="swap">交換</button>
+        <button id="swapAll">全て交換</button>
+      </div>
+      <div id="result"></div>
+      <div id="coin">0</div>
+      <div id="betForm">
+        <label>掛け金<input id="bet" type="number" value="100"></label>
+        <button id="bet-plus100">+100</button>
+        <button id="bet-minus100">-100</button>
+      </div>
+    </div>
+    <div id="logs-wrapper">
+      <div id="logs-header">ログ</div>
+      <table id="logs"></table>
+    </div>
+  </div>
+  <footer>Copyright 2014-2016 Margherita Works / Getaji</footer>
+</body>
+</html>
