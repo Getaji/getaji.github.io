@@ -1,0 +1,74 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #FAFAFA;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.inline {
+  display: inline-block;
+}
+
+#header {
+  font-size: x-large;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+#app {
+  text-align: center;
+}
+
+label[for="fileInput"] {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #DDD;
+  margin-bottom: 10px;
+}
+
+#fileInput {
+  display: none;
+}
+
+#urlInputForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#nowSize {
+  width: 50px;
+  text-align: center;
+}
+
+#enlargedImage canvas {
+  image-rendering: pixelated;
+  box-shadow: 0 0 1px #AAA;
+}
+
+#imageColor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pickedColor {
+  width: 32px;
+  height: 16px;
+  background-color: black;
+  margin-left: 5px;
+}
+
+#formResizer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: small;
+}

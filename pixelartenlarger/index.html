@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>pixelart enlarger | Margherita Works</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+  <div id="header">pixelart enlarger</div>
+  <div id="app">
+    <div id="form">
+      <div id="fileInputForm">
+        <label for="fileInput">
+          <span>ここをクリックしてファイルを選択してください</span>
+          <input
+            id="fileInput"
+            type="file"
+            @change="changeFileInput"
+          >
+        </label>
+      </div>
+      <div id="urlInputForm">
+        <input
+          id="urlInput"
+          placeholder="画像のURL"
+          v-model="inputImageUrl"
+        >
+        <button
+          :disabled="!validateSubmitUrlInput"
+          @click="submitUrlInput"
+        >読込</button>
+      </div>
+    </div>
+    <div id="loadState">
+    </div>
+    <div id="enlargedImage">
+      <canvas
+        :width="canvasWidth"
+        :height="canvasHeight"
+        :style="canvasStyle"
+        ref="canvas"
+        @click="onClickCanvas"
+      >
+        お使いのブラウザはCanvas APIをサポートしていません。
+      </canvas>
+    </div>
+    <div id="canvasToolbox">
+      <div id="imageSize">
+        元サイズ:
+        <div id="imageWidth" class="inline">{{ imageWidth }}</div>
+        <span>x<span>
+        <div id="imageHeight" class="inline">{{ imageHeight }}</div>
+        現在のサイズ:
+        <div id="canvasWidth" class="inline">{{ canvasWidth }}</div>
+        <span>x<span>
+        <div id="canvasHeight" class="inline">{{ canvasHeight }}</div>
+      </div>
+      <div id="imageColor">
+        背景色:
+        <div id="pickedColorRGB" class="inline">rgb(0, 0, 0)</div>
+        <div id="pickedColor" class="inline" :style="{backgroundColor: bgColor}"></div>
+      </div>
+      <div id="imageEnlarger">
+        <div id="formResizer">
+          <button id="incSize" @click="incrementSize">＋</button>
+          <input
+            id="magnification"
+            v-model="magnification"
+            type="number"
+            @change="reflectMagnification"
+          >
+          <button id="decSize" @click="decrementSize">－</button>
+        </div>
+        <div id="property">
+          <!--div id="showBorderWrapper">
+            <label><input id="showBorder" type="checkbox">枠線を表示</label>
+          </div-->
+          <div id="showBgColorWrapper">
+            <label>
+              <input
+                id="showBgColor"
+                type="checkbox"
+                v-model="isShowBgColor"
+                @change="drawImage()"
+              >
+              背景色を表示
+            </label>
+            <input
+              id="selectBgColor"
+              type="color"
+              v-model="bgColor"
+              @change="drawImage()"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <footer>Copyright 2014-2016 Margherita Works / Getaji</footer>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="lib.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
