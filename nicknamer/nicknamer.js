@@ -67,6 +67,11 @@
       },
       onClickCopySaves() {
         prompt('保存した異名(改行区切り)', this.savedNames.join('\n'));
+      },
+      onClickClearSaves() {
+        if (confirm('本当に保存した異名を全削除しますか？')) {
+          this.savedNames = [];
+        }
       }
     }
   });
