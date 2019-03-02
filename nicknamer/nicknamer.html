@@ -12,25 +12,46 @@
     <el-container id="l-appContainer">
       <el-header id="header">異名メーカー</el-header>
       <el-main id="l-appMain">
-        <el-scrollbar class="el-scrollbar__generatedNames">
-          <div class="l-generatedNames">
-            <ul>
-              <li v-for="name in nicknames">{{ name }}</li>
+        <el-tabs v-model="activeTabName" class="l-mainTabs">
+          <el-tab-pane label="Maker" name="maker" class="l-tab__maker">
+            <el-scrollbar class="el-scrollbar__generatedNames">
+              <div class="l-generatedNames">
+                <ul class="c-flatlist">
+                  <li
+                    v-for="(name, i) in nicknames"
+                    class="c-nickname c-generatedName"
+                    :class="{ selected: isSelectedName(i) }"
+                    @click="onClickName(i)"
+                  >{{ name }}</li>
+                </ul>
+              </div>
+            </el-scrollbar>
+            <div class="p-controller">
+              <el-input-number
+                class="p-inputNamesCount"
+                type="number"
+                v-model="namesCount"
+              ></el-input-number>
+              <el-button
+                class="p-btnGenerateNames"
+                :disabled="!validateClickGenerate"
+                @click="onClickGenerate"
+              >個 再生成</el-button>
+              <el-button
+                class="p-btnGenerateNames"
+                :disabled="selectedNames.length===0"
+                @click="saveSelectedName"
+              >保存</el-button>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane label="Saves" name="saves" class="l-tab__saves">
+            <ul class="c-flatlist">
+              <li
+                v-for="name in savedNames"
+              >{{ name }}</li>
             </ul>
-          </div>
-        </el-scrollbar>
-        <div class="p-controller">
-          <el-input-number
-            class="p-inputNamesCount"
-            type="number"
-            v-model="namesCount"
-          ></el-input-number>
-          <el-button
-            class="p-btnGenerateNames"
-            :disabled="!validateClickGenerate"
-            @click="onClickGenerate"
-          >個 再生成</el-button>
-        </div>
+          </el-tab-pane>
+        </el-tabs>
       </el-main>
       <el-footer id="footer">Copyright 2014-2016 Margherita Works / Getaji</el-footer>
     </el-container>

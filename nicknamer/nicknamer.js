@@ -20,7 +20,10 @@
         nicknames: this.generateNicknames(INITIAL_NAMES_COUNT),
         parts1,
         parts2,
-        namesCount: INITIAL_NAMES_COUNT
+        namesCount: INITIAL_NAMES_COUNT,
+        selectedNames: [],
+        savedNames: [],
+        activeTabName: 'maker',
       }
     },
     computed: {
@@ -45,6 +48,21 @@
       },
       onClickGenerate() {
         this.nicknames = this.generateNicknames(this.namesCount);
+      },
+      isSelectedName(i) {
+        return this.selectedNames.includes(i);
+      },
+      onClickName(i) {
+        const pos = this.selectedNames.indexOf(i);
+        if (pos > -1) {
+          this.selectedNames.splice(pos, 1);
+        } else {
+          this.selectedNames.push(i);
+        }
+      },
+      saveSelectedName() {
+        this.savedNames.push(...this.selectedNames.map(i => this.nicknames[i]));
+        this.selectedNames = [];
       }
     }
   });

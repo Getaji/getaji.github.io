@@ -25,7 +25,7 @@ body {
 /* App
    ----------------------------------------------------------------- */
 #app {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -47,33 +47,57 @@ body {
   margin-top: 50px;
 }
 
+.l-mainTabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-mainTabs .el-tabs__content {
+  display: flex;
+}
+
 /* Generated Nicknames
    ----------------------------------------------------------------- */
+.l-tab__maker {
+  display: flex;
+  flex-direction: column;
+}
+
 .l-generatedNames {
   margin: 0 auto;
   width: 350px;
 }
 
-.l-generatedNames ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.l-generatedNames li {
-  margin: 2px 0;
-}
-
 .el-scrollbar__generatedNames {
-  height: 75vh;
 }
 
 .el-scrollbar__generatedNames .el-scrollbar__wrap {
   overflow-x: hidden;
 }
 
+.c-generatedName:not(.selected):hover {
+  background-color: #DDD;
+}
+
+.c-generatedName.selected {
+  background-color: palegreen;
+}
+
 /* ==========================================================================
    Object
    ========================================================================== */
+
+/* Component
+   ----------------------------------------------------------------- */
+
+.c-flatlist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.c-flatlist li {
+  margin: 2px 0;
+}
 
 /* Project
    ----------------------------------------------------------------- */
