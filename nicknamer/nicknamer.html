@@ -45,11 +45,13 @@
             </div>
           </el-tab-pane>
           <el-tab-pane label="Saves" name="saves" class="l-tab__saves">
-            <ul class="c-flatlist">
-              <li
-                v-for="name in savedNames"
-              >{{ name }}</li>
-            </ul>
+            <el-scrollbar class="el-scrollbar__savedNames">
+              <ul class="l-savedNames c-flatlist">
+                <li
+                  v-for="name in savedNames"
+                >{{ name }}</li>
+              </ul>
+            </el-scrollbar>
           </el-tab-pane>
         </el-tabs>
       </el-main>

@@ -61,14 +61,17 @@ body {
 .l-tab__maker {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .l-generatedNames {
   margin: 0 auto;
-  width: 350px;
+  padding: 0 6px;
 }
 
 .el-scrollbar__generatedNames {
+  width: 100%;
 }
 
 .el-scrollbar__generatedNames .el-scrollbar__wrap {
@@ -81,6 +84,27 @@ body {
 
 .c-generatedName.selected {
   background-color: palegreen;
+}
+
+/* Saved Nicknames
+   ----------------------------------------------------------------- */
+.l-tab__saves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.el-scrollbar__savedNames {
+  width: 100%;
+}
+
+.el-scrollbar__savedNames .el-scrollbar__wrap {
+  overflow-x: hidden;
+}
+
+.l-savedNames {
+  padding: 0 6px;
 }
 
 /* ==========================================================================
