@@ -61,7 +61,7 @@
         }
       },
       saveSelectedName() {
-        this.savedNames.push(...this.nicknames);
+        this.savedNames.push(...this.selectedNames.map(i => this.nicknames[i]));
         this.selectedNames = [];
       }
     }
