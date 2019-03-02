@@ -47,6 +47,7 @@
         return new Array(count).fill(0).map(this.generateNickname);
       },
       onClickGenerate() {
+        this.selectedNames = [];
         this.nicknames = this.generateNicknames(this.namesCount);
       },
       isSelectedName(i) {
@@ -63,6 +64,9 @@
       saveSelectedName() {
         this.savedNames.push(...this.selectedNames.map(i => this.nicknames[i]));
         this.selectedNames = [];
+      },
+      onClickCopySaves() {
+        prompt('保存した異名(改行区切り)', this.savedNames.join('\n'));
       }
     }
   });
