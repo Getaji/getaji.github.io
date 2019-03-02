@@ -137,6 +137,7 @@ body {
 }
 
 .p-inputNamesCount {
+  width: 130px;
 }
 
 .p-inputNamesCount input {
