@@ -100,6 +100,12 @@
     margin-top: 30px;
 }
 
+footer {
+    font-size: small;
+    text-align: center;
+    margin-top: 30px;
+}
+
 button {
     border: none;
     background-color: #EEE;

@@ -27,11 +27,13 @@
           完了時にサウンドを再生する
         </label>
       </div>
-      <div id="page-footer">@Getaji / app ver.{{ version }}</div>
       <datalist id="timerNameList">
         <option v-for="name in timerNameList" :value="name"></option>
       </datalist>
     </div>
+    <footer>
+      <a href="../index.html">Copyright 2014-2016 Margherita Works / Getaji</a>
+    </footer>
     <audio id="soundeffect" preload="auto">
       <source src="sounds/tin1.mp3" type="audio/mp3">
     </audio>
