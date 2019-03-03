@@ -12,11 +12,17 @@
   <div id="app">
     <div id="form">
       <div id="fileInputForm">
-        <label for="fileInput">
-          <span>ここをクリックしてファイルを選択してください</span>
+        <label
+          for="fileInput"
+          @dragover.prevent="onDragoverFileInput"
+          @drop.prevent="onDropFileInput"
+        >
+          <div>ここをクリック/タップしてファイルを選択</div>
+          <div>もしくは画像ファイルをドラッグ＆ドロップ</div>
           <input
             id="fileInput"
             type="file"
+            accept="image/*"
             @change="changeFileInput"
           >
         </label>

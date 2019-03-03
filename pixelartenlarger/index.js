@@ -91,15 +91,18 @@ new Vue({
       };
       img.src = url;
     },
+    readFile(file) {
+      const fileReader = new FileReader();
+      fileReader.onload = (fileEv) => {
+        this.loadImage(fileEv.target.result);
+      };
+      fileReader.readAsDataURL(file);
+    },
     changeFileInput(ev) {
       console.log(ev);
       const files = ev.target.files;
       if (files.length > 0) {
-        const fileReader = new FileReader();
-        fileReader.onload = (fileEv) => {
-          this.loadImage(fileEv.target.result);
-        };
-        fileReader.readAsDataURL(files[0]);
+        this.readFile(files[0]);
       }
     },
     submitUrlInput(ev) {
@@ -117,6 +120,24 @@ new Vue({
       const blue = Number.parseInt(data[2]);
       const rgb = `rgb(${red}, ${green}, ${blue})`;
       this.bgColor = rgb;
+    },
+    onDragoverFileInput(ev) {
+      const dataTransfer = ev.dataTransfer;
+      const items = dataTransfer.items;
+      if (items[0].type.startsWith('image/')) {
+        dataTransfer.dropEffect = 'copy';
+        dataTransfer.effectAllowed = 'copy';
+      } else {
+        dataTransfer.dropEffect = 'none';
+        dataTransfer.effectAllowed = 'none';
+      }
+    },
+    onDropFileInput(ev) {
+      const file = event.dataTransfer.files[0];
+      if (file && file.type.startsWith('image/')) {
+        this.readFile(file);
+        return;
+      }
     }
   }
 });
