@@ -43,14 +43,8 @@
     </div>
     <div id="canvasToolbox">
       <div id="imageSize">
-        元サイズ:
-        <div id="imageWidth" class="inline">{{ imageWidth }}</div>
-        <span>x<span>
-        <div id="imageHeight" class="inline">{{ imageHeight }}</div>
-        現在のサイズ:
-        <div id="canvasWidth" class="inline">{{ canvasWidth }}</div>
-        <span>x<span>
-        <div id="canvasHeight" class="inline">{{ canvasHeight }}</div>
+        <span class="originalSize">原寸: {{ imageWidth }}x{{ imageHeight }}</span>
+        <span class="canvasSize">現在: {{ canvasWidth }}x{{ canvasHeight }}</span>
       </div>
       <div id="imageColor">
         背景色:

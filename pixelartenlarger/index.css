@@ -40,6 +40,10 @@ label[for="fileInput"] {
   margin-bottom: 10px;
 }
 
+#imageSize {
+  margin-bottom: 6px;
+}
+
 #nowSize {
   width: 50px;
   text-align: center;
@@ -54,6 +58,7 @@ label[for="fileInput"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 #pickedColor {
