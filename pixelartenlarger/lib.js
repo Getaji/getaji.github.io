@@ -178,7 +178,7 @@ class Configuration {
         return Object.keys(this.data).map(k => this.data[k]);
     }
 }
-if ($) {
+if (window.$) {
   $.fn.extend({
     /**
      * 引数が省略された場合、要素がチェック状態かを返す。
