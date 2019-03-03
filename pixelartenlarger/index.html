@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link rel="stylesheet" type="text/css" href="index.css">
   <title>pixelart enlarger | Margherita Works</title>
 </head>
@@ -27,15 +28,15 @@
         </label>
       </div>
       <div id="urlInputForm">
-        <input
+        <el-input
           id="urlInput"
           placeholder="画像のURL"
           v-model="inputImageUrl"
-        >
-        <button
+        ></el-input>
+        <el-button
           :disabled="!validateSubmitUrlInput"
           @click="submitUrlInput"
-        >読込</button>
+        >読込</el-button>
       </div>
     </div>
     <div id="loadState">
@@ -58,14 +59,13 @@
       </div>
       <div id="imageEnlarger">
         <div id="formResizer">
-          <button id="incSize" @click="incrementSize">＋</button>
-          <input
+          <el-input-number
             id="magnification"
             v-model="magnification"
             type="number"
+            :min="1"
             @change="reflectMagnification"
-          >
-          <button id="decSize" @click="decrementSize">－</button>
+          ></el-input-number>
         </div>
         <div id="property">
           <!--div id="showBorderWrapper">
@@ -109,6 +109,7 @@
     <a href="../index.html">Copyright 2014-2016 Margherita Works / Getaji</a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <script src="lib.js"></script>
   <script src="index.js"></script>
 </body>
