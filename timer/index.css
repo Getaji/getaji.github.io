@@ -1,6 +1,5 @@
-#timerGroups {
-    min-width: 500px;
-    width: 500px;
+#app {
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -80,6 +79,19 @@
 
 .timer-finished .vcProgressBarFg {
     background-color: #68d3ff;
+}
+
+#formAddTimerGroup {
+    margin-top: 10px;
+}
+
+#formAddTimerGroup .header {
+    text-align: center;
+}
+
+#formAddTimerGroup .form {
+    display: flex;
+    justify-content: center;
 }
 
 #globalSettings {

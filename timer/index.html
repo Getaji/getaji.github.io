@@ -17,6 +17,21 @@
           :group="group"
         />
       </div>
+      <div id="formAddTimerGroup">
+        <div class="header">Add Group</div>
+        <div class="form">
+          <input
+            class="name"
+            v-model="formAddTimerGroupName"
+            @keyup.enter="onSubmitFormAddTimerGroup"
+          >
+          <button
+            class="submit"
+            @click="onSubmitFormAddTimerGroup"
+            :disable="isDisableSubmitFormAddTimerGroup"
+          >追加</button>
+        </div>
+      </div>
       <div id="globalSettings">
         <label>
           <input type="checkbox" v-model="isNotifyUponCompletion" />

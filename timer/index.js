@@ -314,7 +314,7 @@ class Timer {
 class TimerGroup {
   constructor(name, timers) {
     this.name = name;
-    this.timers = timers ? timers : [];
+    this.timers = timers || [];
     this.counter = timers ? timers.length : 0;
     this.idnum = 0;
   }
@@ -351,7 +351,19 @@ const app = new Vue({
     timerNameList,
     isNotifyUponCompletion: true,
     isPlaySoundUponCompletion: true,
-    version: '0.1.0'
+    version: '0.1.0',
+    formAddTimerGroupName: '',
+  },
+  computed: {
+    isDisableSubmitFormAddTimerGroup() {
+      return this.formAddTimerGroupName.trim() === '';
+    }
+  },
+  methods: {
+    onSubmitFormAddTimerGroup() {
+      this.timerGroups.push(makeSimpleTimerGroup(this.formAddTimerGroupName));
+      this.formAddTimerGroupName = '';
+    }
   }
 });
 
