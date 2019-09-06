@@ -156,7 +156,7 @@ Vue.component('timer-group', {
   // #computed
   computed: {
     // #validateConfirm
-    validateConfirm() {
+    invalidateConfirm() {
       return this.formTimeToMs() === 0;
     }
   },
@@ -168,11 +168,13 @@ Vue.component('timer-group', {
     },
     // #onConfirmForm
     onConfirmForm() {
+      if (this.invalidateConfirm) return;
       const timer = this.group.makeTimer(this.formLabel, this.formTimeToMs());
       this.formLabel = '';
       this.formHours = 0;
       this.formMinutes = 0;
       this.formSeconds = 0;
+      this.$refs.formTimerName.focus();
     },
     // #onRemoveTimer
     onRemoveTimer(i, timer) {
@@ -194,12 +196,21 @@ Vue.component('timer-group', {
       } else if (ev.deltaY < 0) {
         this[target] += 1;
       }
+    },
+    openEditGroupNamePrompt() {
+      const s = prompt('タイマーグループ名の編集', this.group.name);
+      if (s) {
+        this.group.name = s;
+      }
     }
   },
   // #template
   template: `
     <div class="timerGroup">
-      <div class="timerGroupName">{{ group.name }}</div>
+      <div
+        class="timerGroupName"
+        @click="openEditGroupNamePrompt"
+      >{{ group.name }}</div>
       <div class="timers">
         <group-timer
           v-for="(timer, i) in group.timers"
@@ -210,21 +221,44 @@ Vue.component('timer-group', {
         />
       </div>
       <div class="timerGroupForm">
-        <input class="label" placeholder="タイマー名"
-               autocomplete="on" list="timerNameList"
-               v-model="formLabel">
-        <input class="hours" placeholder="時" type="number"
-               v-model.number="formHours"
-               @wheel="onWheel('formHours', $event)">
-        <input class="minutes" placeholder="分" type="number"
-               v-model.number="formMinutes"
-               @wheel="onWheel('formMinutes', $event)">
-        <input class="seconds" placeholder="秒" type="number"
-               v-model.number="formSeconds"
-               @wheel="onWheel('formSeconds', $event)">
-        <button class="add"
-                :disabled="validateConfirm"
-                @click="onConfirmForm">追加</button>
+        <input
+          class="label"
+          placeholder="タイマー名"
+          autocomplete="on"
+          list="timerNameList"
+          v-model="formLabel"
+          ref="formTimerName"
+          @keyup.enter="onConfirmForm"
+        >
+        <input
+          class="hours"
+          placeholder="時"
+          type="number"
+          v-model.number="formHours"
+          @wheel="onWheel('formHours', $event)"
+          @keyup.enter="onConfirmForm"
+        >
+        <input
+          class="minutes"
+          placeholder="分"
+          type="number"
+          v-model.number="formMinutes"
+          @wheel="onWheel('formMinutes', $event)"
+          @keyup.enter="onConfirmForm"
+        >
+        <input
+          class="seconds"
+          placeholder="秒"
+          type="number"
+          v-model.number="formSeconds"
+          @wheel="onWheel('formSeconds', $event)"
+          @keyup.enter="onConfirmForm"
+        >
+        <button
+          class="add"
+          :disabled="invalidateConfirm"
+          @click="onConfirmForm"
+        >追加</button>
         <label>
           <input type="checkbox" class="startOnAdd" v-model="isStartOnAdd">
           即時開始
