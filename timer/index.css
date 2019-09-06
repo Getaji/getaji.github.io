@@ -87,6 +87,7 @@
 
 #formAddTimerGroup .header {
     text-align: center;
+    font-weight: bold;
 }
 
 #formAddTimerGroup .form {
@@ -101,9 +102,18 @@
     align-items: center;
 }
 
+#globalSettings .header {
+    font-weight: bold;
+}
+
 #globalSettings label {
     display: block;
     font-size: small;
+}
+
+.globalSettingSEVolume {
+    width: 50px;
+    text-align: center;
 }
 
 #page-footer {

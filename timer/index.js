@@ -387,6 +387,12 @@ const app = new Vue({
     isPlaySoundUponCompletion: true,
     version: '0.1.0',
     formAddTimerGroupName: '',
+    seVolume: Math.round(soundeffect.source.volume * 10)
+  },
+  watch: {
+    seVolume(newValue) {
+      soundeffect.source.volume = newValue / 10;
+    }
   },
   computed: {
     isDisableSubmitFormAddTimerGroup() {
