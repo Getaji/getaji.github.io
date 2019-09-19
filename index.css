@@ -11,7 +11,7 @@
    ----------------------------------------------------------------- */
 body {
   background-color: #FAFAFA;
-  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", '游ゴシック', "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 a {
@@ -40,6 +40,11 @@ a {
   font-weight: bold;
   text-align: center;
   margin: 8px 0;
+}
+
+.c-section__body {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Footer
@@ -130,6 +135,25 @@ ul.c-flatlist li:hover {
 .p-profileIcon img {
   width: 64px;
   border-radius: 25%;
+}
+
+/**
+ * Q&A
+ */
+.p-qa {
+    margin: 10px auto;
+    text-align: left;
+    max-width: 400px;
+}
+
+.p-qa__question {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.p-qa__answer {
+  margin: 4px 0 14px 2px;
+  
 }
 
 /* Utility
