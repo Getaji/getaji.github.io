@@ -27,3 +27,10 @@
  * @license MIT
  * @see https://github.com/alexsasharegan/vue-functional-data-merge
  */
+
+/*!
+ * clipboard.js v2.0.4
+ * https://zenorocha.github.io/clipboard.js
+ * 
+ * Licensed MIT © Zeno Rocha
+ */
